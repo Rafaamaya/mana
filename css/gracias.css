@@ -1,0 +1,68 @@
+/* gracias.css — Estilos exclusivos de gracias.html
+   Los estilos compartidos (header, footer, nav, body) están en common.css */
+
+/* ---------------------------------------------MAIN ---------------------------------------------*/
+main {
+  max-width: 760px;
+  margin: 50px auto;
+  padding: 0 20px 60px;
+}
+
+/* ---------------------------------------------PANTALLA DE GRACIAS ---------------------------------------------*/
+.gracias-contenedor {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gracias-icono {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.gracias-contenedor h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 28px;
+  color: #0ed118;
+  margin-bottom: 16px;
+}
+
+.gracias-contenedor p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 12px;
+}
+
+.gracias-contenedor .btn-volver {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 28px;
+  background-color: #0ed118;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+.gracias-contenedor .btn-volver:hover {
+  background-color: #0ab814;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------RESPONSIVE ---------------------------------------------*/
+@media (max-width: 480px) {
+  main { margin: 24px auto; }
+}
+
+@media (min-width: 481px) and (max-width: 960px) {
+  main { margin: 36px auto; padding: 0 28px 60px; }
+}

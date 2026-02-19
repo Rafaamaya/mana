@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Entradas — Maná</title>
+    <meta name="description" content="Comprá tus entradas para el próximo recital de Maná en Argentina.">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/formulario.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./discografia.html">Discografía</a></li>
+                    <li><a href="./formulario.html" class="activo">Formulario</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Compra de Entradas</h1>
+        <p class="subtitulo">
+            Completá el formulario para adquirir tus entradas al próximo recital de
+            <strong>Maná</strong> en Argentina. Todos los campos obligatorios están marcados con
+            <abbr title="Obligatorio">*</abbr>.
+        </p>
+
+        <form action="./gracias.html" method="get" enctype="multipart/form-data" novalidate>
+
+            <!-- DATOS PERSONALES -->
+            <fieldset>
+                <legend>Datos personales</legend>
+
+                <div class="campo">
+                    <label for="nombre">Nombre <abbr title="Obligatorio">*</abbr></label>
+                    <input type="text" id="nombre" name="nombre" required
+                           placeholder="Ej: María" autocomplete="given-name">
+                </div>
+
+                <div class="campo">
+                    <label for="apellido">Apellido <abbr title="Obligatorio">*</abbr></label>
+                    <input type="text" id="apellido" name="apellido" required
+                           placeholder="Ej: González" autocomplete="family-name">
+                </div>
+
+                <div class="campo">
+                    <label for="dni"><abbr title="Documento Nacional de Identidad">DNI</abbr> <abbr title="Obligatorio">*</abbr></label>
+                    <input type="text" id="dni" name="dni" required
+                           placeholder="Ej: 30123456" pattern="[0-9]{7,8}"
+                           title="Ingresá tu DNI sin puntos (7 u 8 dígitos)">
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo electrónico <abbr title="Obligatorio">*</abbr></label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="Ej: ejemplo@correo.com" autocomplete="email">
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono"
+                           placeholder="Ej: +54 9 11 1234-5678" autocomplete="tel">
+                </div>
+            </fieldset>
+
+            <!-- ENTRADAS -->
+            <fieldset>
+                <legend>Detalle de entradas</legend>
+
+                <div class="campo">
+                    <label for="sector">Sector <abbr title="Obligatorio">*</abbr></label>
+                    <select id="sector" name="sector" required>
+                        <option value="">-- Seleccioná un sector --</option>
+                        <option value="campo">Campo — $45.000</option>
+                        <option value="platea-baja">Platea baja — $62.000</option>
+                        <option value="platea-alta">Platea alta — $38.000</option>
+                        <option value="vip">VIP — $120.000</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="cantidad">Cantidad de entradas <abbr title="Obligatorio">*</abbr></label>
+                    <select id="cantidad" name="cantidad" required>
+                        <option value="">-- Elegí la cantidad --</option>
+                        <option value="1">1 entrada</option>
+                        <option value="2">2 entradas</option>
+                        <option value="3">3 entradas</option>
+                        <option value="4">4 entradas</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <p class="label-group">Forma de pago <abbr title="Obligatorio">*</abbr></p>
+                    <div class="opciones-radio">
+                        <label>
+                            <input type="radio" name="pago" value="tarjeta" required>
+                            Tarjeta de crédito / débito
+                        </label>
+                        <label>
+                            <input type="radio" name="pago" value="transferencia">
+                            Transferencia bancaria
+                        </label>
+                        <label>
+                            <input type="radio" name="pago" value="efectivo">
+                            Efectivo en punto de venta
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- CANCIONES FAVORITAS (selección múltiple) -->
+            <fieldset>
+                <legend>¿Cuáles son tus canciones favoritas de Maná?</legend>
+                <p class="hint">Podés elegir más de una opción.</p>
+
+                <div class="opciones-check">
+                    <label>
+                        <input type="checkbox" name="canciones" value="oye-mi-amor">
+                        Oye Mi Amor
+                    </label>
+                    <label>
+                        <input type="checkbox" name="canciones" value="rayando-el-sol">
+                        Rayando el Sol
+                    </label>
+                    <label>
+                        <input type="checkbox" name="canciones" value="vivir-sin-aire">
+                        Vivir Sin Aire
+                    </label>
+                    <label>
+                        <input type="checkbox" name="canciones" value="corazon-espinado">
+                        Corazón Espinado
+                    </label>
+                    <label>
+                        <input type="checkbox" name="canciones" value="labios-compartidos">
+                        Labios Compartidos
+                    </label>
+                    <label>
+                        <input type="checkbox" name="canciones" value="mariposa-traicionera">
+                        Mariposa Traicionera
+                    </label>
+                    <label>
+                        <input type="checkbox" name="canciones" value="en-el-muelle-de-san-blas">
+                        En el Muelle de San Blás
+                    </label>
+                    <label>
+                        <input type="checkbox" name="canciones" value="perdido-en-un-barco">
+                        Perdido en un Barco
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- COMPROBANTE -->
+            <fieldset>
+                <legend>Documentación</legend>
+
+                <div class="campo">
+                    <label for="comprobante">Subí una foto de tu <abbr title="Documento Nacional de Identidad">DNI</abbr> (frente) <abbr title="Obligatorio">*</abbr></label>
+                    <p class="hint">Formatos aceptados: <strong>JPG, PNG o PDF</strong>. Máx. 5 MB.</p>
+                    <input type="file" id="comprobante" name="comprobante" required
+                           accept=".jpg,.jpeg,.png,.pdf">
+                </div>
+
+                <div class="campo">
+                    <label for="comentarios">Comentarios adicionales</label>
+                    <textarea id="comentarios" name="comentarios" rows="4"
+                              placeholder="¿Necesitás accesibilidad especial, tenés alguna consulta?"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form-acciones">
+                <button type="submit" class="btn-submit">Confirmar compra</button>
+                <button type="reset" class="btn-reset">Limpiar formulario</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-social">
+                <ul class="social-media-list">
+                    <li class="social-media">
+                        <a class="icon instagram" href="https://www.instagram.com/manaoficial" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm11 1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
+                        </a>
+                    </li>
+                    <li class="social-media">
+                        <a class="icon facebook" href="https://www.facebook.com/mana" target="_blank" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M22 12.073C22 6.505 17.523 2 12 2S2 6.505 2 12.073C2 17.09 5.657 21.245 10.438 22v-6.99H7.898v-2.937h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.196 2.238.196v2.47h-1.26c-1.242 0-1.63.771-1.63 1.562v1.873h2.773l-.443 2.937h-2.33V22C18.343 21.245 22 17.09 22 12.073z"/></svg>
+                        </a>
+                    </li>
+                    <li class="social-media">
+                        <a class="icon youtube" href="https://www.youtube.com/user/OficialMana" target="_blank" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.7-.8-2.1-.9C15.9 5 12 5 12 5s-3.9 0-6.9.1c-.4 0-1.3.1-2.1.9-.6.6-.8 2-.8 2S2 9.6 2 11.3v1.3C2 14.4 2.2 16 2.2 16s.2 1.4.8 2c.8.8 1.9.8 2.4.9 1.8.2 6.6.2 6.6.2s3.9 0 6.9-.1c.4 0 1.3-.1 2.1-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.3C22 9.6 21.8 8 21.8 8zM10 15V9l5.2 3L10 15z"/></svg>
+                        </a>
+                    </li>
+                    <li class="social-media">
+                        <a class="icon spotify" href="https://open.spotify.com/" target="_blank" aria-label="Spotify">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.47 14.2a1 1 0 01-1.37.33c-3.15-1.93-7.12-2.37-11.78-1.29a1 1 0 01-.45-1.95c5.1-1.17 9.53-.67 13.04 1.4.47.29.62.9.33 1.37zm1.2-3.12a1.2 1.2 0 01-1.64.4c-2.7-1.63-6.82-2.1-10-1.14a1.2 1.2 0 01-.68-2.3c3.8-1.11 8.45-.58 11.6 1.31.57.34.75 1.08.4 1.64zm.13-3.23a1.4 1.4 0 01-1.9.46c-2.44-1.45-6.17-1.88-9.04-1.03a1.4 1.4 0 01-.78-2.69c3.5-1.02 7.77-.53 10.7 1.2.66.39.87 1.24.46 1.9z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="site-info">Rafael Amaya · Maquetado y Desarrollo Web · Docente a cargo: <span class="docente">Mabel Garcia</span> · Escuela Da Vinci · 2025</p>
+            <p class="footer-rights">&copy; 2025 Rafael Amaya. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

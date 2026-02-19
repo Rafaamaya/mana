@@ -1,0 +1,230 @@
+/* formulario.css — Estilos exclusivos de formulario.html
+   Los estilos compartidos (header, footer, nav, body) están en common.css */
+
+/* ---------------------------------------------MAIN ---------------------------------------------*/
+main {
+  max-width: 760px;
+  margin: 50px auto;
+  padding: 0 20px 60px;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------FORMULARIO ---------------------------------------------*/
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Fieldset */
+fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 24px 28px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+legend {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0ed118;
+  padding: 0 10px;
+  letter-spacing: 0.05em;
+}
+
+/* Campo individual */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.campo:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.label-group {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 8px;
+}
+
+.hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 6px;
+}
+
+/* Inputs, selects y textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+select,
+textarea {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color .2s ease, background .2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0ed118;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+input[type="file"] {
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+select option {
+  background: #222;
+  color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Placeholder */
+::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 13px;
+}
+
+/* Radios */
+.opciones-radio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opciones-radio label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.opciones-radio input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #0ed118;
+  cursor: pointer;
+}
+
+/* Checkboxes */
+.opciones-check {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+}
+
+.opciones-check label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.opciones-check input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #0ed118;
+  cursor: pointer;
+}
+
+/* Botones */
+.form-acciones {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-submit,
+.btn-reset {
+  font-family: "system-ui", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+.btn-submit {
+  background-color: #0ed118;
+  color: #000;
+}
+
+.btn-submit:hover {
+  background-color: #0ab814;
+  transform: translateY(-2px);
+}
+
+.btn-reset {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-reset:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------RESPONSIVE ---------------------------------------------*/
+@media (max-width: 480px) {
+  main { margin: 24px auto; }
+
+  fieldset { padding: 16px; }
+
+  .opciones-check { grid-template-columns: 1fr; }
+
+  .form-acciones { flex-direction: column; align-items: stretch; }
+
+  .btn-submit, .btn-reset { text-align: center; }
+}
+
+@media (min-width: 481px) and (max-width: 960px) {
+  main { margin: 36px auto; padding: 0 28px 60px; }
+
+  .opciones-check { grid-template-columns: 1fr; }
+}

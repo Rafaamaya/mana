@@ -1,79 +1,10 @@
-body {
-  font-family: Arial, sans-serif;
-  background: fixed url("../img/bio-bg.webp") no-repeat center center / cover;
-  margin: 0;
-  padding: 0;
-  color: white;
-}
-
-/* ---------------------------------------------HEADER ---------------------------------------------*/
-header div {
-  height: 100px;
-  background: url("../img/logo-w-opt.webp") no-repeat;
-  background-position-y: center;
-  background-position-x: 20px;
-  text-align: right;
-  align-content: center;
-  margin-inline: 35px;
-  margin-top: 30px;
-}
-
-nav ul {
-  padding: 0px;
-  margin: 0px;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  font-family: "system-ui", sans-serif;
-  font-size: 18px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
-  padding: 10px 15px;
-}
-
-nav ul li a {
-  border-radius: 6px;
-  transition: color .2s ease, background-color .2s ease, transform .2s ease;
-}
-
-nav ul li:hover a,
-nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-  color: #0ed118;
-  transform: translateY(-1px);
-}
 
 /* ---------------------------------------------MAIN ---------------------------------------------*/
-main{
-    margin: 70px;
+main {
+  margin: 70px;
 }
 
-h1 {
-  font-family: 'Merriweather', sans-serif;
-  font-size: 36px;
-  color: white;
-  margin: 0;
-  padding-top: 10px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-family: 'Merriweather', sans-serif;
-}
-
-
-/* Multimedia */
+/* MULTIMEDIA */
 #multimedia {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -276,68 +207,39 @@ h2 {
   list-style-type: disc;
 }
 
-/* ---------------------------------------------FOOTER ---------------------------------------------*/
-footer {
-  text-align: center;
-  justify-items: center;
-  background-color: #111;
-  color: white;
+/* ---------------------------------------------RESPONSIVE ---------------------------------------------*/
+@media (max-width: 480px) {
+  main { margin: 20px 16px; }
+
+  .media-grid { grid-template-columns: 1fr; }
+
+  .genero-grid { grid-template-columns: 1fr; }
+
+  .contenedor {
+    display: block;
+    margin: 10px 0;
+  }
+  .contenedor div {
+    width: auto;
+    display: block;
+    padding: 0 16px 16px;
+  }
+  .contenedor img {
+    padding: 10px;
+    border-radius: 12px 12px 0 0;
+  }
 }
 
-.footer-container {
-  border-radius: 20px;
-  padding: 20px;
-}
+@media (min-width: 481px) and (max-width: 960px) {
+  main { margin: 40px 30px; }
 
-/* Redes sociales del footer */
-.footer-social {
-  margin: 16px auto 8px;
-}
+  .genero-grid { grid-template-columns: 1fr; }
 
-.social-media-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: inline-flex;
-  gap: 12px;
-}
-.social-media-list .social-media a {
-  display: inline-block;
-  padding: 8px 12px;
-  color: #fff;
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 6px;
-  transition: background-color .2s ease, color .2s ease, transform .2s ease;
-}
+  .contenedor { display: block; margin: 10px auto; }
 
-/* Iconos SVG */
-.social-media-list .social-media a.icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  padding: 0; 
-}
-
-.social-media-list .social-media a.icon svg {
-  width: 22px;
-  height: 22px;
-}
-
-/* Colores de marca al hover */
-.social-media-list .social-media a.instagram:hover { color: #E4405F; }
-.social-media-list .social-media a.facebook:hover { color: #1877F2; }
-.social-media-list .social-media a.youtube:hover { color: #FF0000; }
-.social-media-list .social-media a.spotify:hover { color: #1DB954; transform: translateY(-1px); }
-
-.site-info {
-  margin: 8px 0 4px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.75);
-}
-
-.footer-rights {
-  font-size: 12px;
+  .contenedor div {
+    width: auto;
+    display: block;
+    padding: 0 16px 16px;
+  }
 }
