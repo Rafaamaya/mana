@@ -1,0 +1,319 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: fixed url("../img/bio-bg.webp") no-repeat center center / cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* ---------------------------------------------HEADER ---------------------------------------------*/
+
+header div {
+    height: 100px;
+    background: url("../img/logo-w-opt.webp") no-repeat;
+    background-position-y: center;
+    background-position-x: 20px;
+    text-align: right;
+    align-content: center;
+    margin-inline: 35px;
+    margin-top: 30px;
+}
+
+nav ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-family: "system-ui", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav ul li a {
+    border-radius: 6px;
+    transition: color .2s ease, background-color .2s ease, transform .2s ease;
+}
+
+nav ul li:hover a,
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #0ed118;
+    transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------FOOTER ---------------------------------------------*/
+
+footer {
+    text-align: center;
+    justify-items: center;
+    background-color: #111;
+    color: white;
+}
+
+.footer-container {
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Redes sociales del footer */
+.footer-social {
+    margin: 16px auto 8px;
+}
+
+.social-media-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 12px;
+}
+
+.social-media-list .social-media a {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 6px;
+    transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+/* Iconos SVG */
+.social-media-list .social-media a.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+}
+
+.social-media-list .social-media a.icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Colores de marca al hover */
+.social-media-list .social-media a.instagram:hover {
+    color: #E4405F;
+}
+
+.social-media-list .social-media a.facebook:hover {
+    color: #1877F2;
+}
+
+.social-media-list .social-media a.youtube:hover {
+    color: #FF0000;
+}
+
+.social-media-list .social-media a.spotify:hover {
+    color: #1DB954;
+    transform: translateY(-1px);
+}
+
+.site-info {
+    margin: 8px 0 4px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-rights {
+    font-size: 12px;
+}
+
+/* ---------------------------------------------MAIN ---------------------------------------------*/
+main {
+    padding: 24px 100px 48px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Índice de álbumes */
+.album-nav {
+    margin: 12px 0 20px;
+}
+
+.album-index {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.album-index a {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.25);
+    transition: background-color .2s ease, color .2s ease, transform .2s ease, border-color .2s ease;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.album-index a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-1px);
+}
+
+.album-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    justify-items: center;
+}
+
+.album {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 16px;
+    backdrop-filter: blur(2px);
+    text-align: center;
+}
+
+.album h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.album h3 small {
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.album p {
+    margin: 0 0 10px;
+}
+
+.album-data {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hover tarjetas y zoom de portada */
+.album {
+    transition: transform .2s;
+}
+
+.album:hover {
+    transform: translateY(-4px);
+}
+
+.album .cover {
+    transition: transform 0.25s;
+}
+
+.album:hover .cover {
+    transform: scale(1.03);
+}
+
+/* Acciones del álbum */
+.album-actions {
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .25);
+    transition: background-color .2s ease, transform .2s ease, border-color .2s ease;
+}
+
+.spotify-btn {
+    background: rgba(29, 185, 84, .15);
+    border-color: rgba(29, 185, 84, .45);
+}
+
+.spotify-btn:hover {
+    background: rgba(29, 185, 84, .35);
+}
+
+.youtube-btn {
+    background: rgba(255, 0, 0, .15);
+    border-color: rgba(255, 0, 0, .45);
+}
+
+.youtube-btn:hover {
+    background: rgba(255, 0, 0, .35);
+}
+
+/* Acordeón de temas con :target (ver más abajo) */
+
+.tracklist-list {
+    list-style: none;
+    margin: 0 0 0 18px;
+    padding: 0;
+    font-size: 14px;
+}
+
+.tracklist-list li {
+    margin: 2px 0;
+}
+
+.tracklist-panel {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, .25);
+    scroll-margin-top: 80px;
+}
+
+.tracklist-panel:target {
+    display: block;
+    border-color: rgba(255, 255, 255, .45);
+    background: rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .25);
+}
+
+.tracklist-close {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Resaltar la tarjeta con panel abierto (requiere soporte de :has) */
+.album:has(.tracklist-panel:target) {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+}
+
+.album:has(.tracklist-panel:target) .cover {
+    transform: scale(1.00);
+}

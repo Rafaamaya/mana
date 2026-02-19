@@ -1,0 +1,343 @@
+body {
+  font-family: Arial, sans-serif;
+  background: fixed url("../img/bio-bg.webp") no-repeat center center / cover;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* ---------------------------------------------HEADER ---------------------------------------------*/
+header div {
+  height: 100px;
+  background: url("../img/logo-w-opt.webp") no-repeat;
+  background-position-y: center;
+  background-position-x: 20px;
+  text-align: right;
+  align-content: center;
+  margin-inline: 35px;
+  margin-top: 30px;
+}
+
+nav ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  font-family: "system-ui", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+nav ul li a {
+  border-radius: 6px;
+  transition: color .2s ease, background-color .2s ease, transform .2s ease;
+}
+
+nav ul li:hover a,
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #0ed118;
+  transform: translateY(-1px);
+}
+
+/* ---------------------------------------------MAIN ---------------------------------------------*/
+main{
+    margin: 70px;
+}
+
+h1 {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 36px;
+  color: white;
+  margin: 0;
+  padding-top: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Merriweather', sans-serif;
+}
+
+
+/* Multimedia */
+#multimedia {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Galería */
+#galeria {
+  margin: 24px 0 40px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255,255,255,.15);
+  backdrop-filter: blur(6px);
+}
+
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 1024px) {
+  #galeria { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+  #galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  #galeria { grid-template-columns: 1fr; }
+}
+
+#galeria a {
+  display: block;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.04);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+#galeria a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.35);
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+}
+
+#galeria a::after {
+  content: "Ver";
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+#galeria a:hover::after { opacity: 1; transform: translateY(0); }
+
+#galeria img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 2.25s ease;
+}
+
+#galeria a:hover img { transform: scale(1.1); }
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.media-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.media-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin-top: 8px;
+}
+
+.media-box iframe {
+  width: 100%;
+  height: 315px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* miembros */
+#miembros {
+  text-align: center;
+}
+
+.contenedor {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  display: inline-block;
+  height: auto;
+  margin: 4px;
+  background: rgb(0 0 0 / 32%);
+}
+
+.contenedor img {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.contenedor div {
+  display: inline-block;
+  width: 450px;
+  padding-right: 20px;
+  vertical-align: top;
+}
+
+.contenedor div h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 24px;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contenedor div p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.contenedor div h4 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+  text-align: left;
+}
+
+.contenedor div ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.contenedor div ul li {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Especificidad para los años en la lista de Latin Grammys */
+.latin-grammys .resaltado {
+  font-weight: 700;
+}
+
+/* genero musical */
+#genero-musical {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 24px 0px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.genero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.genero-bloque h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.genero-bloque p,
+.genero-bloque ul {
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+.genero-bloque ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+/* ---------------------------------------------FOOTER ---------------------------------------------*/
+footer {
+  text-align: center;
+  justify-items: center;
+  background-color: #111;
+  color: white;
+}
+
+.footer-container {
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Redes sociales del footer */
+.footer-social {
+  margin: 16px auto 8px;
+}
+
+.social-media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 12px;
+}
+.social-media-list .social-media a {
+  display: inline-block;
+  padding: 8px 12px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 6px;
+  transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+/* Iconos SVG */
+.social-media-list .social-media a.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0; 
+}
+
+.social-media-list .social-media a.icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Colores de marca al hover */
+.social-media-list .social-media a.instagram:hover { color: #E4405F; }
+.social-media-list .social-media a.facebook:hover { color: #1877F2; }
+.social-media-list .social-media a.youtube:hover { color: #FF0000; }
+.social-media-list .social-media a.spotify:hover { color: #1DB954; transform: translateY(-1px); }
+
+.site-info {
+  margin: 8px 0 4px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+}
+
+.footer-rights {
+  font-size: 12px;
+}
