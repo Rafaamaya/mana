@@ -27,37 +27,36 @@
         <h1>Compra de Entradas</h1>
         <p class="subtitulo">
             Completá el formulario para adquirir tus entradas al próximo recital de
-            <strong>Maná</strong> en Argentina. Todos los campos obligatorios están marcados con
-            <abbr title="Obligatorio">*</abbr>.
+            Maná en Argentina. Todos los campos obligatorios están marcados con *
         </p>
 
         <form action="./gracias.html" method="get" enctype="multipart/form-data" novalidate>
 
             <!-- DATOS PERSONALES -->
             <fieldset>
-                <legend>Datos personales</legend>
+                <h2>Datos personales</h2>
 
                 <div class="campo">
-                    <label for="nombre">Nombre <abbr title="Obligatorio">*</abbr></label>
+                    <label for="nombre">Nombre *</label>
                     <input type="text" id="nombre" name="nombre" required
                            placeholder="Ej: María" autocomplete="given-name">
                 </div>
 
                 <div class="campo">
-                    <label for="apellido">Apellido <abbr title="Obligatorio">*</abbr></label>
+                    <label for="apellido">Apellido *</label>
                     <input type="text" id="apellido" name="apellido" required
                            placeholder="Ej: González" autocomplete="family-name">
                 </div>
 
                 <div class="campo">
-                    <label for="dni"><abbr title="Documento Nacional de Identidad">DNI</abbr> <abbr title="Obligatorio">*</abbr></label>
+                    <label for="dni"><abbr title="Documento Nacional de Identidad">DNI</abbr> *</label>
                     <input type="text" id="dni" name="dni" required
                            placeholder="Ej: 30123456" pattern="[0-9]{7,8}"
                            title="Ingresá tu DNI sin puntos (7 u 8 dígitos)">
                 </div>
 
                 <div class="campo">
-                    <label for="email">Correo electrónico <abbr title="Obligatorio">*</abbr></label>
+                    <label for="email">Correo electrónico *</label>
                     <input type="email" id="email" name="email" required
                            placeholder="Ej: ejemplo@correo.com" autocomplete="email">
                 </div>
@@ -71,10 +70,10 @@
 
             <!-- ENTRADAS -->
             <fieldset>
-                <legend>Detalle de entradas</legend>
+                <h2>Detalle de entradas</h2>
 
                 <div class="campo">
-                    <label for="sector">Sector <abbr title="Obligatorio">*</abbr></label>
+                    <label for="sector">Sector *</label>
                     <select id="sector" name="sector" required>
                         <option value="">-- Seleccioná un sector --</option>
                         <option value="campo">Campo — $45.000</option>
@@ -85,7 +84,7 @@
                 </div>
 
                 <div class="campo">
-                    <label for="cantidad">Cantidad de entradas <abbr title="Obligatorio">*</abbr></label>
+                    <label for="cantidad">Cantidad de entradas *</label>
                     <select id="cantidad" name="cantidad" required>
                         <option value="">-- Elegí la cantidad --</option>
                         <option value="1">1 entrada</option>
@@ -96,7 +95,7 @@
                 </div>
 
                 <div class="campo">
-                    <p class="label-group">Forma de pago <abbr title="Obligatorio">*</abbr></p>
+                    <p class="label-group">Forma de pago *</p>
                     <div class="opciones-radio">
                         <label>
                             <input type="radio" name="pago" value="tarjeta" required>
@@ -116,7 +115,7 @@
 
             <!-- CANCIONES FAVORITAS (selección múltiple) -->
             <fieldset>
-                <legend>¿Cuáles son tus canciones favoritas de Maná?</legend>
+                <h2>¿Cuáles son tus canciones favoritas de Maná?</h2>
                 <p class="hint">Podés elegir más de una opción.</p>
 
                 <div class="opciones-check">
@@ -157,10 +156,10 @@
 
             <!-- COMPROBANTE -->
             <fieldset>
-                <legend>Documentación</legend>
+                <h2>Documentación</h2>
 
                 <div class="campo">
-                    <label for="comprobante">Subí una foto de tu <abbr title="Documento Nacional de Identidad">DNI</abbr> (frente) <abbr title="Obligatorio">*</abbr></label>
+                    <label>Subí una foto de tu <abbr title="Documento Nacional de Identidad">DNI</abbr> (frente) *</label>
                     <p class="hint">Formatos aceptados: <strong>JPG, PNG o PDF</strong>. Máx. 5 MB.</p>
                     <input type="file" id="comprobante" name="comprobante" required
                            accept=".jpg,.jpeg,.png,.pdf">

@@ -1,5 +1,3 @@
-/* gracias.css — Estilos exclusivos de gracias.html
-   Los estilos compartidos (header, footer, nav, body) están en common.css */
 
 /* ---------------------------------------------MAIN ---------------------------------------------*/
 main {
@@ -8,7 +6,7 @@ main {
   padding: 0 20px 60px;
 }
 
-/* ---------------------------------------------PANTALLA DE GRACIAS ---------------------------------------------*/
+/* PANTALLA DE GRACIAS */
 .gracias-contenedor {
   text-align: center;
   padding: 60px 20px;
@@ -18,11 +16,6 @@ main {
   backdrop-filter: blur(8px);
   max-width: 600px;
   margin: 0 auto;
-}
-
-.gracias-icono {
-  font-size: 64px;
-  margin-bottom: 16px;
 }
 
 .gracias-contenedor h2 {

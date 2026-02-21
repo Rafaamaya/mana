@@ -16,14 +16,13 @@ main {
   line-height: 1.6;
 }
 
-/* ---------------------------------------------FORMULARIO ---------------------------------------------*/
+/* FORMULARIO */
 form {
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
 
-/* Fieldset */
 fieldset {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 14px;
