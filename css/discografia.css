@@ -1,4 +1,3 @@
-
 /* ---------------------------------------------MAIN ---------------------------------------------*/
 main {
     padding: 24px 100px 48px;
@@ -184,13 +183,45 @@ h1 {
 
 /* ---------------------------------------------RESPONSIVE ---------------------------------------------*/
 @media (max-width: 480px) {
-    main { padding: 16px; }
+    main {
+        padding: 16px;
+    }
 
-    .album-grid { grid-template-columns: 1fr; }
+    .album-falta-amor {
+        content: url("../img/album-falta-amor-mobile.jpg");
+    }
+
+    .album-donde-juegan {
+        content: url("../img/album-donde-juegan-mobile.jpg");
+    }
+
+    .album-angeles-lloran {
+        content: url("../img/album-angeles-lloran-mobile.jpg");
+    }
+
+    .album-suenos-liquidos {
+        content: url("../img/album-suenos-liquidos-mobile.jpg");
+    }
+
+    .album-revolucion {
+        content: url("../img/album-revolucion-mobile.jpg");
+    }
+
+    .album-drama {
+        content: url("../img/album-drama-mobile.jpg");
+    }
+
+    .album-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 960px) {
-    main { padding: 24px 32px 48px; }
+    main {
+        padding: 24px 32px 48px;
+    }
 
-    .album-grid { grid-template-columns: 1fr; }
+    .album-grid {
+        grid-template-columns: 1fr;
+    }
 }
