@@ -109,6 +109,13 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
+/* Mapa centrado debajo de los videos */
+.media-box-centered {
+  grid-column: 1 / -1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 /* miembros */
 #miembros {
   text-align: center;
@@ -207,6 +214,11 @@ main {
   list-style-type: disc;
 }
 
+/* Nombres de listas Billboard (itálica visual) */
+.lista-billboard {
+  font-style: italic;
+}
+
 /* ---------------------------------------------RESPONSIVE ---------------------------------------------*/
 @media (max-width: 480px) {
   main { margin: 20px 16px; }
@@ -242,8 +254,4 @@ main {
     display: block;
     padding: 0 16px 16px;
   }
-}
-/* Nombres de listas Billboard (itálica visual) */
-.lista-billboard {
-  font-style: italic;
 }
