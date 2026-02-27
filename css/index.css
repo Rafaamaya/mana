@@ -243,3 +243,7 @@ main {
     padding: 0 16px 16px;
   }
 }
+/* Nombres de listas Billboard (itálica visual) */
+.lista-billboard {
+  font-style: italic;
+}
